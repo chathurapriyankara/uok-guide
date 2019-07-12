@@ -18,4 +18,8 @@ export class HomePage {
     }).addTo(this.map);
 
   }
+
+  selectStart(item) {
+    console.log(item.detail.value);
+  }
 }

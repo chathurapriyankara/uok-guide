@@ -10,10 +10,10 @@
     <ion-list>
         <ion-item>
             <ion-label>From</ion-label>
-            <ion-select placeholder="Select the starting location">
+            <ion-select (ionChange)="selectStart($event);" placeholder="Select the starting location">
                 <ion-select-option value="fcs">Faculty of science</ion-select-option>
                 <ion-select-option value="dh">Dharmaloka Hall</ion-select-option>
-                <ion-select-option value="dh">Library</ion-select-option>
+                <ion-select-option value="lib">Library</ion-select-option>
             </ion-select>
         </ion-item>
         <ion-item>
