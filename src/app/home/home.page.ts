@@ -17,9 +17,5 @@ export class HomePage {
       attribution: 'edupala.com © ionic LeafLet',
     }).addTo(this.map);
 
-
-    // marker([28.6, 77]).addTo(this.map)
-    //     .bindPopup('Ionic 4 <br> Leaflet.')
-    //     .openPopup();
   }
 }
