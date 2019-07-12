@@ -12,14 +12,14 @@ export class HomePage {
   ionViewDidEnter() { this.leafletMap(); }
 
   leafletMap() {
-    this.map = new Map('mapId').setView([28.644800, 77.216721], 10);
-    tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    this.map = new Map('mapId').setView([6.97427, 79.91637], 17);
+    tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'edupala.com © ionic LeafLet',
     }).addTo(this.map);
 
 
-    marker([28.6, 77]).addTo(this.map)
-        .bindPopup('Ionic 4 <br> Leaflet.')
-        .openPopup();
+    // marker([28.6, 77]).addTo(this.map)
+    //     .bindPopup('Ionic 4 <br> Leaflet.')
+    //     .openPopup();
   }
 }
