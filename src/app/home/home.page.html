@@ -1,12 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div id="mapId" style="width: 100%; height: 100%">
-  </div>
+    <ion-list>
+        <ion-item>
+            <ion-label>From</ion-label>
+            <ion-select placeholder="Select the starting location">
+                <ion-select-option value="fcs">Faculty of science</ion-select-option>
+                <ion-select-option value="dh">Dharmaloka Hall</ion-select-option>
+                <ion-select-option value="dh">Library</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>To</ion-label>
+            <ion-select placeholder="Select the destination">
+                <ion-select-option value="fcs">NELRC</ion-select-option>
+                <ion-select-option value="dh">Medical Center</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <div id="mapId" style="width: 100%; height: 100%">
+    </div>
 </ion-content>
