@@ -9,6 +9,7 @@ import { Map, latLng, tileLayer, Layer, marker, polyline } from 'leaflet';
 export class HomePage {
   map: Map;
   startLocation;
+  line;
   ionViewDidEnter() { this.leafletMap(); }
 
   leafletMap() {
@@ -39,6 +40,9 @@ export class HomePage {
   }
 
     selectDestination(item) {
+        if (this.line) {
+            this.line.remove();
+        }
         switch (item.detail.value) {
             case 'nelrc': {
                 // Following values should be loaded from a JSON
@@ -55,13 +59,13 @@ export class HomePage {
                     const pointI = latLng(6.97524, 79.91606);
                     const pointJ = latLng(6.97507, 79.91540);
                     const pointList = [pointA, pointB, pointC, pointD, pointE, pointF, pointG, pointH, pointI, pointJ];
-                    const line = new polyline(pointList, {
+                    this.line = new polyline(pointList, {
                         color: 'blue',
                         weight: 8,
                         opacity: 0.5,
                         smoothFactor: 1
                     });
-                    line.addTo(this.map);
+                    this.line.addTo(this.map);
                 }
                 break;
             }
