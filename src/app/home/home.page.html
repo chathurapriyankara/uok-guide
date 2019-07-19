@@ -18,9 +18,9 @@
         </ion-item>
         <ion-item>
             <ion-label>To</ion-label>
-            <ion-select placeholder="Select the destination">
-                <ion-select-option value="fcs">NELRC</ion-select-option>
-                <ion-select-option value="dh">Medical Center</ion-select-option>
+            <ion-select (ionChange)="selectDestination($event);" placeholder="Select the destination">
+                <ion-select-option value="nelrc">NELRC</ion-select-option>
+                <ion-select-option value="mc">Medical Center</ion-select-option>
             </ion-select>
         </ion-item>
     </ion-list>

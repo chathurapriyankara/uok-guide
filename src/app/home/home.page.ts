@@ -20,6 +20,34 @@ export class HomePage {
   }
 
   selectStart(item) {
-    console.log(item.detail.value);
+      switch (item.detail.value) {
+          case 'fcs': {
+              // Following values should be loaded from a JSON
+              marker([6.97389, 79.91580]).addTo(this.map).bindPopup('Faculty of Science');
+              break;
+          }
+          case 'dh': {
+              marker([6.97291, 79.91533]).addTo(this.map).bindPopup('Faculty of Science');
+              break;
+          }
+          case 'lib': {
+              marker([6.97503, 79.91531]).addTo(this.map).bindPopup('Faculty of Science');
+              break;
+          }
+      }
   }
+
+    selectDestination(item) {
+        switch (item.detail.value) {
+            case 'nelrc': {
+                // Following values should be loaded from a JSON
+                marker([6.97285, 79.91675]).addTo(this.map).bindPopup('Faculty of Science');
+                break;
+            }
+            case 'mc': {
+                marker([6.97645, 79.91450]).addTo(this.map).bindPopup('Faculty of Science');
+                break;
+            }
+        }
+    }
 }
